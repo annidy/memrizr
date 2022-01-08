@@ -28,6 +28,7 @@ services:
       - "traefik.http.routers.account.rule=Host(`malcorp.test`) && PathPrefix(`/api/account`)"
     environment:
       - ENV=dev
+      - API_ACCOUNT=/api/account
     volumes:
       - ./account:/go/src/app
     # have to use $$ (double-dollar) so docker doesn't try to substitute a variable
