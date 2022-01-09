@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jacobsngoodwin/memrizr/model"
+	"github.com/jacobsngoodwin/memrizr/account/model"
 )
 
 // Handler struct holds required services for handler to function
@@ -44,12 +44,7 @@ func NewHandler(c *Config) {
 // Me handler calls services for getting
 // a user's details
 
-// Signup handler
-func (h *Handler) Signup(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"hello": "it's signup",
-	})
-}
+
 
 // Signin handler
 func (h *Handler) Signin(c *gin.Context) {
